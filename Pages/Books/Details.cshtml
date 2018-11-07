@@ -1,0 +1,106 @@
+﻿@page
+@model SSDAssignmentBOX.Pages.Books.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Book</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Book.ISBN)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Book.ISBN)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Book.Title)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Book.Title)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Book.Author)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Book.Author)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Book.Summary)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Book.Summary)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Book.DatePublished)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Book.DatePublished)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Book.Genre)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Book.Genre)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Book.Language)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Book.Language)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Book.Characters)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Book.Characters)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Book.DateReceived)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Book.DateReceived)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Book.Location)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Book.Location)
+        </dd>
+        <dt>
+            @if (User.Identity.IsAuthenticated)
+            {
+                @Html.DisplayNameFor(model => model.Book.Availability)
+            }
+        </dt>
+        <dd>
+            @if (User.Identity.IsAuthenticated)
+            {
+                @Html.DisplayFor(model => model.Book.Availability)
+            }
+        </dd>
+    </dl>
+</div>
+<div>
+    @if (User.Identity.IsAuthenticated)
+    {
+        @if (Model.Book.Availability == "Available")
+        {
+            <a asp-page="../Reservations/ConfirmReserve" asp-route-id="@Model.Book.ID">
+                Reserve
+            </a>
+        }
+    } |
+    @if (User.Identity.IsAuthenticated)
+    {
+        if (User.IsInRole("Admin"))
+        {
+            <a asp-page="./Edit" asp-route-id="@Model.Book.ID">Edit</a> }
+    } |
+                                                                        
+<a asp-page="./Index">Back to List</a>
+</div>

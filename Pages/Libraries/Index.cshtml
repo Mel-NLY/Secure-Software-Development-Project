@@ -1,0 +1,75 @@
+﻿@page
+@model SSDAssignmentBOX.Pages.Libraries.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Search Libraries</h2>
+
+<p>
+    @if (User.Identity.IsAuthenticated)
+    {
+        if (User.IsInRole("Admin") || User.IsInRole("Staff"))
+        {
+            <a asp-page="Create">Create New</a>
+        }
+    }
+</p>
+
+<form>
+    Location: <input asp-for="SearchString" size="60" />
+    <input type="submit" value="Search" asp-page-handler="Test" />
+    <p>
+        <span asp-validation-for="SearchString" class="text-danger"></span>
+    </p>
+</form>
+<table class="table">
+    <thead>
+        <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Library[0].BranchName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Library[0].BranchLocation)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Library[0].PhoneNumber)
+                </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+            @foreach (var item in Model.Library)
+            {
+        <tr>
+            <td>
+                 @item.BranchName
+            </td>
+            <td>
+                @item.BranchLocation
+            </td>
+            <td>
+                @item.PhoneNumber
+            </td>
+            <td>
+                @if (User.Identity.IsAuthenticated)
+                {
+                    if (User.IsInRole("Admin") || User.IsInRole("Staff"))
+                    {
+                        <a asp-page="./Edit" asp-route-id="@item.Id">Edit</a>}
+                } |
+
+                <a asp-page="./Details" asp-route-id="@item.Id">Details</a> |
+                @if (User.Identity.IsAuthenticated)
+                {
+                    if (User.IsInRole("Admin") || User.IsInRole("Staff"))
+                    {
+                        <a asp-page="./Delete" asp-route-id="@item.Id">Delete</a>
+                    }
+                }
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

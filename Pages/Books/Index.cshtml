@@ -1,0 +1,117 @@
+﻿@page 
+@model SSDAssignmentBOX.Pages.Books.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Search for your library book</h2>
+
+<p>
+    @if (User.Identity.IsAuthenticated)
+    {
+        if (User.IsInRole("Admin") || User.IsInRole("Staff"))
+        {
+            <a asp-page="Create">Create New</a>
+        }
+    }
+</p>
+
+<form>
+        <select asp-for="BookGenre" asp-items="Model.Genres">
+            <option value="">All</option>
+        </select>
+
+        Title: <input asp-for="SearchString" size="60" />
+        <input type="submit" value="Search" asp-page-handler="Test" />
+    <p>
+        <span asp-validation-for="SearchString" class="text-danger"></span>
+    </p>
+</form>
+
+<table class="table">
+    <thead>
+        <tr>
+            <td>
+                @Html.DisplayNameFor(modelItem => Model.Book[0].ISBN)
+            </td>
+            <th>
+                @Html.DisplayNameFor(model => model.Book[0].Title)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Book[0].Author)
+            </th>
+
+            <th>
+                @Html.DisplayNameFor(model => model.Book[0].DatePublished)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Book[0].Genre)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Book[0].Language)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Book[0].Location)
+            </th>
+            <th>
+                @if (User.Identity.IsAuthenticated)
+                {
+                    @Html.DisplayNameFor(model => model.Book[0].Availability)
+                }
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Book)
+        {
+        <tr>
+            <td>
+                @item.ISBN
+            </td>
+            <td>
+                @item.Title
+            </td>
+            <td>
+                @item.Author
+            </td>
+            <td>
+                @item.DatePublished.Date.ToString("MMM dd yyy")
+            </td>
+            <td>
+                @item.Genre
+            </td>
+            <td>
+                @item.Language
+            </td>
+            <td>
+                @item.Location
+            </td>
+            <td>
+                @if (User.Identity.IsAuthenticated)
+                {
+                    @item.Availability
+                }
+            </td>
+            <td>
+                 @if (User.Identity.IsAuthenticated)
+                 {
+                     if (User.IsInRole("Admin") || User.IsInRole("Staff"))
+                     {
+                        <a asp-page="./Edit" asp-route-id="@item.ID">Edit</a>}
+                 } |
+                                                                           
+                <a asp-page="./Details" asp-route-id="@item.ID">Details</a> |
+                 @if (User.Identity.IsAuthenticated)
+                 {
+                     if (User.IsInRole("Admin") || User.IsInRole("Staff"))
+                     {
+                        <a asp-page="./Delete" asp-route-id="@item.ID">Delete</a>
+                     }
+                 }
+            </td>
+        </tr>
+        }
+    </tbody>
+</table>

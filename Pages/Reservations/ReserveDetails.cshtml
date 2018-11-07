@@ -1,0 +1,103 @@
+﻿@page
+@model SSDAssignmentBOX.Pages.Reservations.ReserveDetailsModel
+
+@{
+    ViewData["Title"] = "ReserveDetails";
+}
+
+<h2>ReserveDetails</h2>
+
+<div>
+    <h4>Reservation</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Reservation.dateBorrowed)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Reservation.dateBorrowed)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Reservation.dueDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Reservation.dueDate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Reservation.Borrower)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Reservation.Borrower)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Reservation.ISBN)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Reservation.ISBN)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Reservation.Title)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Reservation.Title)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Reservation.Author)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Reservation.Author)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Reservation.Summary)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Reservation.Summary)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Reservation.DatePublished)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Reservation.DatePublished)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Reservation.Genre)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Reservation.Genre)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Reservation.Language)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Reservation.Language)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Reservation.Characters)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Reservation.Characters)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Reservation.DateReceived)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Reservation.DateReceived)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Reservation.Location)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Reservation.Location)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Reservation.Availability)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Reservation.Availability)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./ReserveDelete" asp-route-id="@Model.Reservation.ReservationID">Delete</a> |
+    <a asp-page="./ReserveIndex">Back to List</a>
+</div>

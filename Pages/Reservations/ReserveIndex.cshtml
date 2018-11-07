@@ -1,0 +1,80 @@
+﻿@page
+@model SSDAssignmentBOX.Pages.Reservations.ReserveIndexModel
+
+@{
+    ViewData["Title"] = "Reservation History";
+}
+
+<h2>Reservation History</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Reservation[0].dateBorrowed)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Reservation[0].dueDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Reservation[0].Borrower)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Reservation[0].ISBN)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Reservation[0].Title)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Reservation[0].Author)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Reservation[0].Genre)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Reservation[0].Language)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Reservation[0].Location)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Reservation) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.dateBorrowed)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.dueDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Borrower)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ISBN)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Title)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Author)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Genre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Language)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Location)
+            </td>
+            <td>
+                <a asp-page="./ReserveDetails" asp-route-id="@item.ReservationID">Details</a> |
+                <a asp-page="./ReserveDelete" asp-route-id="@item.ReservationID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

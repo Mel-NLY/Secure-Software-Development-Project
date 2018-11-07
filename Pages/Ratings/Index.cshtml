@@ -1,0 +1,96 @@
+﻿@page "{searchString?}"
+@model SSDAssignmentBOX.Pages.Ratings.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Book Rating</h2>
+
+<p>
+    @if (User.Identity.IsAuthenticated)
+    {
+        <a asp-page="./Create">Create New Book Ratings</a>
+    }
+    </p>
+
+<form>
+    <p>
+        Title: <input type="text" name="SearchString">
+        <input type="submit" value="Filter" />
+    </p>
+</form>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Rating[0].BookTitle)
+            </th>
+            @if (User.Identity.IsAuthenticated)
+            {
+                    @if (User.IsInRole("Admin") || User.IsInRole("Staff"))
+                    {
+                        <th>
+                            @Html.DisplayNameFor(model => model.Rating[0].User)
+                        </th>
+                    }
+            }
+            <th>
+                @Html.DisplayNameFor(model => model.Rating[0].BookRating)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Rating[0].BookComments)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Rating[0].RatingTime)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Rating)
+        {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.BookTitle)
+            </td>
+            @if (User.Identity.IsAuthenticated)
+            {
+                    @if (User.IsInRole("Admin") || User.IsInRole("Staff"))
+                    {
+                        <td>
+                            @Html.DisplayFor(modelItem => item.User)
+                        </td>
+                    }
+            }
+            <td>
+                @Html.DisplayFor(modelItem => item.BookRating)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BookComments)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RatingTime)
+            </td>
+            <td>
+                @if (User.Identity.IsAuthenticated)
+                {                    
+                    @if (User.IsInRole("Admin") || User.IsInRole("Staff"))
+                    {
+                        <a asp-page="./Edit" asp-route-id="@item.RatingId">Edit</a> 
+                    }
+                } |
+                <a asp-page="./Details" asp-route-id="@item.RatingId">Details</a> |
+                @if (User.Identity.IsAuthenticated)
+                {                    
+                    @if (User.IsInRole("Admin") || User.IsInRole("Staff"))
+                    {
+                        <a asp-page="./Delete" asp-route-id="@item.RatingId">Delete</a> 
+                    }
+                } |
+            </td>
+        </tr>
+        }
+    </tbody>
+</table>

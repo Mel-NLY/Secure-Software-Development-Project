@@ -1,0 +1,27 @@
+﻿@page
+@model ErrorModel
+@{
+    ViewData["Title"] = "Error";
+}
+
+<h1 class="text-danger">Error.</h1>
+<h2 class="text-danger">An error occurred while processing your request.</h2>
+
+@if (User.Identity.IsAuthenticated)
+{
+    if (User.IsInRole("Admin"))
+    {
+        @if (Model.ShowRequestId)
+        {
+            <p>
+                <strong>Request ID:</strong> <code>@Model.RequestId</code>
+            </p>
+        }
+    }
+}
+
+        <h3>Something went wrong, please try again later</h3>
+        <p>
+            Status Code : @Model.iStatusCode
+        </p>
+<a href="/Index">Go back to Mainpage</a>

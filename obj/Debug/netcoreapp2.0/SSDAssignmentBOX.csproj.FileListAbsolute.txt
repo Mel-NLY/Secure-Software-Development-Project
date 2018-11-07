@@ -1,0 +1,22 @@
+C:\Users\SSDStudent\Desktop\SSD Assignment\SSDAssignmentBOX\SSDAssignmentBOX\bin\Debug\netcoreapp2.0\SSDAssignmentBOX.deps.json
+C:\Users\SSDStudent\Desktop\SSD Assignment\SSDAssignmentBOX\SSDAssignmentBOX\bin\Debug\netcoreapp2.0\SSDAssignmentBOX.runtimeconfig.json
+C:\Users\SSDStudent\Desktop\SSD Assignment\SSDAssignmentBOX\SSDAssignmentBOX\bin\Debug\netcoreapp2.0\SSDAssignmentBOX.runtimeconfig.dev.json
+C:\Users\SSDStudent\Desktop\SSD Assignment\SSDAssignmentBOX\SSDAssignmentBOX\bin\Debug\netcoreapp2.0\SSDAssignmentBOX.dll
+C:\Users\SSDStudent\Desktop\SSD Assignment\SSDAssignmentBOX\SSDAssignmentBOX\bin\Debug\netcoreapp2.0\SSDAssignmentBOX.pdb
+C:\Users\SSDStudent\Desktop\SSD Assignment\SSDAssignmentBOX\SSDAssignmentBOX\obj\Debug\netcoreapp2.0\SSDAssignmentBOX.csprojResolveAssemblyReference.cache
+C:\Users\SSDStudent\Desktop\SSD Assignment\SSDAssignmentBOX\SSDAssignmentBOX\obj\Debug\netcoreapp2.0\SSDAssignmentBOX.csproj.CoreCompileInputs.cache
+C:\Users\SSDStudent\Desktop\SSD Assignment\SSDAssignmentBOX\SSDAssignmentBOX\obj\Debug\netcoreapp2.0\SSDAssignmentBOX.AssemblyInfoInputs.cache
+C:\Users\SSDStudent\Desktop\SSD Assignment\SSDAssignmentBOX\SSDAssignmentBOX\obj\Debug\netcoreapp2.0\SSDAssignmentBOX.AssemblyInfo.cs
+C:\Users\SSDStudent\Desktop\SSD Assignment\SSDAssignmentBOX\SSDAssignmentBOX\obj\Debug\netcoreapp2.0\SSDAssignmentBOX.dll
+C:\Users\SSDStudent\Desktop\SSD Assignment\SSDAssignmentBOX\SSDAssignmentBOX\obj\Debug\netcoreapp2.0\SSDAssignmentBOX.pdb
+D:\NP\Sem 2.1\SSD\Assignment\SSD Assignment\SSD Assignment\SSDAssignmentBOX\SSDAssignmentBOX\bin\Debug\netcoreapp2.0\SSDAssignmentBOX.deps.json
+D:\NP\Sem 2.1\SSD\Assignment\SSD Assignment\SSD Assignment\SSDAssignmentBOX\SSDAssignmentBOX\bin\Debug\netcoreapp2.0\SSDAssignmentBOX.runtimeconfig.json
+D:\NP\Sem 2.1\SSD\Assignment\SSD Assignment\SSD Assignment\SSDAssignmentBOX\SSDAssignmentBOX\bin\Debug\netcoreapp2.0\SSDAssignmentBOX.runtimeconfig.dev.json
+D:\NP\Sem 2.1\SSD\Assignment\SSD Assignment\SSD Assignment\SSDAssignmentBOX\SSDAssignmentBOX\bin\Debug\netcoreapp2.0\SSDAssignmentBOX.dll
+D:\NP\Sem 2.1\SSD\Assignment\SSD Assignment\SSD Assignment\SSDAssignmentBOX\SSDAssignmentBOX\bin\Debug\netcoreapp2.0\SSDAssignmentBOX.pdb
+D:\NP\Sem 2.1\SSD\Assignment\SSD Assignment\SSD Assignment\SSDAssignmentBOX\SSDAssignmentBOX\obj\Debug\netcoreapp2.0\SSDAssignmentBOX.csprojAssemblyReference.cache
+D:\NP\Sem 2.1\SSD\Assignment\SSD Assignment\SSD Assignment\SSDAssignmentBOX\SSDAssignmentBOX\obj\Debug\netcoreapp2.0\SSDAssignmentBOX.csproj.CoreCompileInputs.cache
+D:\NP\Sem 2.1\SSD\Assignment\SSD Assignment\SSD Assignment\SSDAssignmentBOX\SSDAssignmentBOX\obj\Debug\netcoreapp2.0\SSDAssignmentBOX.AssemblyInfoInputs.cache
+D:\NP\Sem 2.1\SSD\Assignment\SSD Assignment\SSD Assignment\SSDAssignmentBOX\SSDAssignmentBOX\obj\Debug\netcoreapp2.0\SSDAssignmentBOX.AssemblyInfo.cs
+D:\NP\Sem 2.1\SSD\Assignment\SSD Assignment\SSD Assignment\SSDAssignmentBOX\SSDAssignmentBOX\obj\Debug\netcoreapp2.0\SSDAssignmentBOX.dll
+D:\NP\Sem 2.1\SSD\Assignment\SSD Assignment\SSD Assignment\SSDAssignmentBOX\SSDAssignmentBOX\obj\Debug\netcoreapp2.0\SSDAssignmentBOX.pdb
